@@ -5,10 +5,12 @@ import StreamEdit from './streams/StreamEdit';
 import StreamList from './streams/StreamList';
 import StreamDelete from './streams/StreamDelete';
 import StreamShow from './streams/StreamShow';
+import Header from './components/Header'
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <BrowserRouter>
         <h1>Front Side</h1>
         <Route exact path ='/' component = {StreamList}/>
