@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 
 class GoogleAuth extends React.Component{
     componentDidMount(){
-        console.log(this.props)
-
         window.gapi.load('client:auth2',()=>{
             window.gapi.client.init({
                 clientId:'331056152399-qqsmteadnmpvcq6l3ope92unp9relbff.apps.googleusercontent.com',
@@ -41,7 +39,6 @@ class GoogleAuth extends React.Component{
     render(){
         return (
             <div>
-                {console.log(this.state)}
                 <br />
                 {this.display()}
             </div>
@@ -50,7 +47,6 @@ class GoogleAuth extends React.Component{
 }
 
 const mapStateToProps = (state)=>{
-    console.log(state)
     return {signed_in: state.authReducer.signed_in}
 }
 
